@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function getInternalFunc(data) {
+            function internalFunc() {
+                console.log(data);
+            }
+
+            return internalFunc;
+        }
+
+        var f1 = getInternalFunc(1);
+        var f2 = getInternalFunc(2);
+
+        f1();
+        f2();
+    </script>
+</body>
+</html>

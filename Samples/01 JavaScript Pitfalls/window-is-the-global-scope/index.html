@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+
+        var num = 456;
+
+        var str = `Hello contact # ${num}`;
+
+        console.log(str);
+
+        var x = 1234;
+
+        console.log(x);
+
+        console.log(window.x);
+
+//        for(var key in window) {
+//            console.log(key);
+//        }
+
+        console.log("JSON" in window);
+
+        window.JSON = function() {
+        }
+
+        var originalSetTimeout = window.setTimeout;
+
+        window.setTimeout = function() {
+            console.log("Someone invoked setTimeout");
+
+            return originalSetTimeout.apply(this, arguments);
+        }
+
+        setTimeout(function() {
+            console.log("XXX");
+        }, 2500);
+    </script>
+</body>
+</html>
