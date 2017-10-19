@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div ng-controller="AppCtrl">
+        <h1>{{view}}</h1>
+        <div class="site-menu">
+            <a ng-click="gotoLogin()" href="#">Login</a>
+        </div>
+
+        <div ng-controller="HomeCtrl" ng-if="view == 'home'">
+            <span>{{view}}</span>
+            <button ng-click="changeView()">Change View</button>
+
+            <span>{{counter}}</span>
+            <button ng-click="inc()">Inc</button>
+            <button ng-click="dec()">Dec</button>
+
+            <div>
+                <input ng-model="name">
+                <button ng-click="sayHello()">Say Hello</button>
+            </div>
+        </div>
+
+        <div ng-controller="LoginCtrl" ng-if="view == 'login'">
+            <div>
+                <div>
+                    User Name
+                </div>
+                <div>
+                    <input>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    Password
+                </div>
+                <div>
+                    <input type="password">
+                </div>
+            </div>
+
+            <div>
+                <button>Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="home.controller.js"></script>
+    <script src="login.controller.js"></script>
+    <script src="app.controller.js"></script>
+</body>
+</html>

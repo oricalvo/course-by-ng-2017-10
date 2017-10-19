@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div ng-controller="AppCtrl as $ctrl">
+        <h1>{{$ctrl.title}}</h1>
+
+        <div ng-controller="HomeCtrl as $ctrl">
+            <h2>{{$ctrl.title}}</h2>
+            <span>{{$ctrl.counter}}</span>
+            <button ng-click="$ctrl.inc()">Inc</button>
+            <button ng-click="$ctrl.dec()">Dec</button>
+        </div>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="home.controller.js"></script>
+    <script src="app.controller.js"></script>
+</body>
+</html>
