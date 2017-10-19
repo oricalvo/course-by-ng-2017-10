@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <span>{{counter}}</span>
+        <button ng-click="inc()">Inc</button>
+        <button ng-click="dec()">Dec</button>
+
+        <div>
+            <input ng-model="name">
+            <button ng-click="sayHello()">Say Hello</button>
+        </div>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="home.controller.js"></script>
+</body>
+</html>
