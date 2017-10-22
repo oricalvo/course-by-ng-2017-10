@@ -1,0 +1,19 @@
+app-file-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1px;
+    height: 100%;
+}
+
+app-file-content .title {
+    background-color: blue;
+    color: white;
+    padding: 0.25em;
+    font-size: 1.25em;
+}
+
+app-file-content .content {
+    padding: 0.25em;
+    height: 100%;
+    overflow: auto;
+}

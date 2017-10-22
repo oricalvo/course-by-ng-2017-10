@@ -1,0 +1,14 @@
+app-root {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+app-root > app-directory-content {
+    width: 100%;
+}
+
+app-root > app-file-content {
+    width: 100%;
+}

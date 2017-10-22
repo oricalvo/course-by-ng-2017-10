@@ -1,0 +1,13 @@
+<app-directory-content
+        dir="$ctrl.state.directory"
+        on-selected="$ctrl.onItemSelected(item)">
+</app-directory-content>
+
+<app-file-content
+        ng-if="$ctrl.state.selected.type == 'file'">
+</app-file-content>
+
+<app-directory-content
+        ng-if="$ctrl.state.selected.type == 'dir'"
+        dir="$ctrl.state.selected">
+</app-directory-content>

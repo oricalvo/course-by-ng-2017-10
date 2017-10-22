@@ -1,0 +1,10 @@
+<div class="title">
+    {{$ctrl.dir.name}}
+</div>
+
+<ul>
+    <li ng-repeat="item in $ctrl.dir.items"
+        ng-click="$ctrl.select(item)">
+        <span>{{item.name}}</span>
+    </li>
+</ul>
