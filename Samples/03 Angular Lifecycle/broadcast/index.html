@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div ng-controller="AppCtrl as $ctrl">
+        <h1>{{$ctrl.title}}</h1>
+        <button ng-click="$ctrl.reset()">Reset</button>
+    </div>
+
+    <div ng-controller="SecondCtrl as $ctrl">
+        <span>{{$ctrl.counter}}</span>
+        <button ng-click="$ctrl.inc()">Inc</button>
+    </div>
+
+    <div ng-controller="SecondCtrl as $ctrl">
+        <span>{{$ctrl.counter}}</span>
+        <button ng-click="$ctrl.inc()">Inc</button>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.controller.js"></script>
+    <script src="second.controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div ng-controller="AppCtrl as $ctrl">
+        <span>{{$ctrl.title}}</span>
+        <span>{{$ctrl.counter}}</span>
+
+        <div>
+            <button ng-click="$ctrl.change()">Change</button>
+            <button ng-click="$ctrl.stam()">Stam</button>
+        </div>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.controller.js"></script>
+</body>
+</html>

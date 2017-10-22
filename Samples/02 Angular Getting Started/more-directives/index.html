@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="home.controller.css">
+</head>
+<body>
+    <div class="home" ng-controller="HomeCtrl as $ctrl">
+        <h1>{{$ctrl.counter}}</h1>
+        <button ng-click="$ctrl.inc()">Inc</button>
+        <button ng-click="$ctrl.dump()">Dump</button>
+        <span ng-class="{title: $ctrl.hasTitle}">Hello</span>
+        <button ng-click="$ctrl.change()">Change Title</button>
+
+        <ul>
+            <li ng-repeat="contact in $ctrl.contacts">
+                <span>{{contact.name}}</span>
+                <button ng-click="$ctrl.remove(contact, $index)">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="home.controller.js"></script>
+</body>
+</html>
