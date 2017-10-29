@@ -1,0 +1,9 @@
+<h1>Products</h1>
+
+<button ng-click="$ctrl.refresh()">Refresh</button>
+
+<ul>
+    <li ng-repeat="contact in $ctrl.state.products">
+        <span>{{contact.name}}</span>
+    </li>
+</ul>

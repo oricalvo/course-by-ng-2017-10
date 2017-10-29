@@ -1,0 +1,14 @@
+app-error {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+app-error .content {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 0.5em;
+}
