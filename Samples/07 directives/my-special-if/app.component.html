@@ -1,14 +1,8 @@
-<h1>Angular 1.6</h1>
+<div ng-repeat="num in [1,2,3]">
+    <button ng-click="hide=!hide">Toggle</button>
 
-<h2>{{$ctrl.counter}}</h2>
-
-<button ng-click="$ctrl.toggle()">Toggle</button>
-
-<p my-special-if="$ctrl.showButton">
-    Conditional P
-    <button ng-click="$ctrl.run()">Click me</button>
-    <div ng-controller="HomeCtrl">
-        <button ng-click="run()">Inner Controller</button>
+    <div my-if="!hide" style="display: inline-block">
+        <app-clock></app-clock>
+        <button ng-click="$ctrl.run()">Click me</button>
     </div>
-</p>
-
+</div>
